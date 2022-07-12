@@ -7,3 +7,5 @@ mkcd() { mkdir -p $1; cd $1 }
 #Dir into a directory and list its files
 cls() { cd "$1"; ls;}
 
+#Most used shell commands
+topcmd() { history | awk '{ print $2 }' | sort | uniq -c |sort -rn | head }

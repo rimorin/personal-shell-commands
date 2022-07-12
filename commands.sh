@@ -16,3 +16,6 @@ topcmd() { history | awk '{ print $2 }' | sort | uniq -c |sort -rn | head }
 
 #Create a new branch with latest changes from master
 newbranch() { git checkout master; git pull; git checkout -b $1; }
+
+#Refresh and clean up branches that are merged to master
+refreshbranch() { git checkout master; git fetch -p; git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d }

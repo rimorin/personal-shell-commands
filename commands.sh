@@ -31,3 +31,8 @@ pushbranch() { git push -u origin HEAD; }
 
 #Commit and Push branch to remote
 commitpush() { git commit -am "$1" && git push -u origin HEAD }
+
+#Kubernetes productivity function
+
+#Set k8 namespace
+kubenv () { kubectl config set-context --current --namespace="$1" }

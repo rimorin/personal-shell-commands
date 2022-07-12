@@ -1,6 +1,10 @@
+#Clean your terminal screen.
 alias c="clear"
+#Go up the directory once
 alias ..='cd ..'
+#Go up the directory twice.
 alias ...='cd ../..'
+#Search shell history
 alias histg="history | grep"
 #Show which applications are connecting to the network.
 alias listen="lsof -P -i -n" 

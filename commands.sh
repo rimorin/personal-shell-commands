@@ -19,3 +19,9 @@ newbranch() { git checkout master; git pull; git checkout -b $1; }
 
 #Refresh and clean up branches that are merged to master
 refreshbranch() { git checkout master; git fetch -p; git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d }
+
+#FZF style git diff
+codediff() {
+  preview="git diff $@ --color=always -- {-1}"
+  git diff $@ --name-only | fzf -m --ansi --preview $preview
+}

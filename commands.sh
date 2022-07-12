@@ -25,3 +25,9 @@ codediff() {
   preview="git diff $@ --color=always -- {-1}"
   git diff $@ --name-only | fzf -m --ansi --preview $preview
 }
+
+#Push current branch to remote
+pushbranch() { git push -u origin HEAD; }
+
+#Commit and Push branch to remote
+commitpush() { git commit -am "$1" && git push -u origin HEAD }

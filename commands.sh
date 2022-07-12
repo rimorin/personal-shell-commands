@@ -9,3 +9,10 @@ cls() { cd "$1"; ls;}
 
 #Most used shell commands
 topcmd() { history | awk '{ print $2 }' | sort | uniq -c |sort -rn | head }
+
+
+
+#Git productivity function
+
+#Create a new branch with latest changes from master
+newbranch() { git checkout master; git pull; git checkout -b $1; }

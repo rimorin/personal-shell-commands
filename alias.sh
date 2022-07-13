@@ -10,11 +10,15 @@ alias histg="history | grep"
 alias listen="lsof -P -i -n" 
 #Get your public IP address and host.
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
+
 #Restart
 alias reboot="sudo /sbin/reboot"
 #Shutdown
 alias shutdown="sudo /sbin/shutdown -h now"
+
+#view zsh shell
+alias vzsh="less ~/.zshrc"
 #Restart zsh shell
-alias ezsh="source ~/.zshrc"
+alias rzsh="source ~/.zshrc"
 #Edit zsh and restart shell
 alias ezsh="vim ~/.zshrc && source ~/.zshrc"

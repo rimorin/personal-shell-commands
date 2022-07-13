@@ -10,7 +10,8 @@ cls() { cd "$1"; ls;}
 #Most used shell commands
 topcmd() { history | awk '{ print $2 }' | sort | uniq -c |sort -rn | head }
 
-
+#VSCode productivity function (Requires VScode shell installation)
+open_repo() { cd "$1"; code . }
 
 #Git productivity function
 
@@ -30,7 +31,7 @@ codediff() {
 pushbranch() { git push -u origin HEAD; }
 
 #Commit and Push branch to remote
-commitpush() { git commit -am "$1" && git push -u origin HEAD }
+commitpush() { git commit -m "$1" && git push -u origin HEAD }
 
 #Kubernetes productivity function
 

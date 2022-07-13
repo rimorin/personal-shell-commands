@@ -11,7 +11,17 @@ cls() { cd "$1"; ls;}
 topcmd() { history | awk '{ print $2 }' | sort | uniq -c |sort -rn | head }
 
 #VSCode productivity function (Requires VScode shell installation)
+
+#Open repo in VScode
 open_repo() { cd "$1"; code . }
+
+#Create py3 project , its virtual python env (Assuming python3 is configured into shell) and open in VScode
+new_py_project() {
+  mkdir -p $1; cd $1;
+  python -m venv ".$1";
+  code .
+}
+
 
 #Git productivity function
 

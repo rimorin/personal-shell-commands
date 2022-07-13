@@ -14,3 +14,7 @@ alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
 alias reboot="sudo /sbin/reboot"
 #Shutdown
 alias shutdown="sudo /sbin/shutdown -h now"
+#Restart zsh shell
+alias ezsh="source ~/.zshrc"
+#Edit zsh and restart shell
+alias ezsh="vim ~/.zshrc && source ~/.zshrc"

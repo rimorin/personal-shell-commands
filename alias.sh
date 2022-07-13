@@ -10,3 +10,7 @@ alias histg="history | grep"
 alias listen="lsof -P -i -n" 
 #Get your public IP address and host.
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
+#Restart
+alias reboot="sudo /sbin/reboot"
+#Shutdown
+alias shutdown="sudo /sbin/shutdown -h now"

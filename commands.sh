@@ -33,6 +33,16 @@ pushbranch() { git push -u origin HEAD; }
 #Commit and Push branch to remote
 commitpush() { git commit -m "$1" && git push -u origin HEAD }
 
+#Search log in current branch with keyword
+gitlog() {
+  if [ -z "$1" ]; then
+      echo 'Please specify search pattern.'
+      return
+  fi
+
+  git log --name-status --grep="$1"
+}
+
 #Kubernetes productivity function
 
 #Set k8 namespace
